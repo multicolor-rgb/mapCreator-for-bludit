@@ -1,0 +1,20 @@
+
+    
+    
+        <div id='test' style='height:300px'></div>
+       
+        <script src='http://localhost/bl-plugins/mapCreator/js/leaflet.js'></script>
+    
+        <script>
+        let test = L.map('test', {
+            center: [53.3369,15.0371],
+            zoom:10,
+            scrollWheelZoom:false,
+         
+        });
+    
+        L.marker([53.3369,15.0371]).addTo(test).bindPopup(`<p>test</p>
+`,{autoClose:false}).openPopup();	;L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap',
+        }).addTo(test);
+        </script>
